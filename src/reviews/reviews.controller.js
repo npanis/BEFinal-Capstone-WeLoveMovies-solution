@@ -27,6 +27,7 @@ async function list(request, response) {
 async function listReviewAndCritics(request, response) {
   const { movieId } = request.params;
   const data = await service.listReviewAndCritics(movieId);
+  console.log(data);
   response.json({ data });
 }
 

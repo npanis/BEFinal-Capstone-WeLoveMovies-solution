@@ -23,25 +23,11 @@ const addCritic = mapProperties({
 });
 
 async function listReviewAndCritics(movie_id){
-  return db("reviews as r")
-  .select(
-    "r.review_id",
-    "r.content",
-    "r.score",
-    "r.created_at",
-    "r.updated_at",
-    "r.critic_id",
-    "r.movie_id",
-    "c.critic_id",
-    "c.preferred_name",
-    "c.surname",
-    "c.organization_name",
-    "c.created_at as critic_created_at",
-    "c.updated_at as critic_updated_at"
-  )
-  .join("critics as c", "r.critic_id", "c.critic_id")
-  .where({ "r.movie_id": movie_id })
-  .then((reviews) => reviews.map(addCritic));
+ return db("reviews as r")
+    .select("*")
+    .join("critics as c", "r.critic_id", "c.critic_id")
+    .where({ "r.movie_id": movie_id })
+    .then((reviews) => reviews.map(addCritic));
   }
 
 async function read(reviewId) {
