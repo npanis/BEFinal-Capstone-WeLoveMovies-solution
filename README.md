@@ -1,8 +1,8 @@
 # WeLoveMovies
 
-Render (BE):
+Render (BE): https://befinal-capstone-welovemovies-solution.onrender.com/movies
 
-Render (FE) :
+Render (FE) : https://starter-movie-front-end-h5f7.onrender.com/
 
 ## Overview
 
@@ -26,8 +26,7 @@ Tasks to complete:
   -  Write database queries to complete CRUD routes in an Express server.
   -  Return joined and nested data with Knex.
   -  Write database migrations using Knex's migration tools.
-  -  Deploy your backend server to a cloud service. It's not necessary to deploy the frontend. While   -   -  deploying the frontend is recommended, it is optional and will not be graded.
-
+  -  Deploy your backend server to a cloud service. It's not necessary to deploy the frontend.
 ## Routes
 
 The following routes and methods are available:
@@ -73,3 +72,19 @@ The following routes and methods are available:
 1. Run `npm install`
 2. Copy `.env.sample` and add db urls to `.env`
 3. Run `npm run start:dev`
+
+### To run and deploy via Render:
+1. Make sure git repository is connected to render
+2. Make sure all postgre db is live and tables are correctly migrated and seeded
+3. Make sure to add all env environments: 
+
+    DEVELOPMENT_DATABASE_URL 
+
+    NODE_ENV
+
+    NODE_VERSION
+
+    PRODUCTION_DATABASE_URL
+
+
+
